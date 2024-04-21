@@ -13,7 +13,7 @@ const dataSchema= new mongoose.Schema({
      'Division Name' : String,
      'Office Name' : String,
      'OfficeType' : String,
-     'Pincode' : String,
+     'PinCode' : String,
      'Region Name' : String,
      'StateName' : String
 });

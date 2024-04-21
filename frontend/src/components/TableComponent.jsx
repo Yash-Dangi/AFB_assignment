@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import TableRow from "./TableRowComponent"
 // import { set } from "mongoose"
-export default function Table({rowDataArray , id , setID , idMax , count , setIsEdit , setOverlayData}){
+export default function Table({rowDataArray , id , setID , idMax , count , setIsEdit , setOverlayData , setIsDelete , SetDeleteId}){
     return(
        <div className="w-full max-w-full h-full max-h-screen">
            
@@ -50,14 +50,14 @@ export default function Table({rowDataArray , id , setID , idMax , count , setIs
                 return (  rowDataArray.map((rowData) => {
                     // index_no++;
                     index_no++;
-                    return(<TableRow setOverlayData = {setOverlayData} rowData={rowData} index_no={index_no} setIsEdit={setIsEdit}></TableRow>) 
+                    return(<TableRow setOverlayData = {setOverlayData} rowData={rowData} index_no={index_no} setIsEdit={setIsEdit} setDeleteId={SetDeleteId} setIsDelete={setIsDelete}></TableRow>) 
                }));
             })()}
             
        </tbody>
    </table>
-   <nav className="flex items-center flex-column flex-wrap md:flex-row justify-center gap-4 pt-4" aria-label="Table navigation">
-       <span className="text-sm font-normal text-gray-500 dark:text-gray-400 mb-4 md:mb-0 block w-full md:inline md:w-auto">Showing <span className="font-semibold text-gray-900">{`${Math.min(id*10 - 9 , count)}- ${Math.min(count , id *10)} of ${count}`}</span></span>
+   <nav className="flex items-center flex-column flex-wrap md:flex-row justify-center gap-4 pt-2" aria-label="Table navigation">
+       <span className="text-sm font-normal font-semibold mb-4 md:mb-0 block w-full md:inline md:w-auto">Showing <span className="font-semibold text-gray-900">{`${Math.min(id*10 - 9 , count)}- ${Math.min(count , id *10)} of ${count}`}</span></span>
        <ul className="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8">
            <li>
            <button onClick = {() => {
