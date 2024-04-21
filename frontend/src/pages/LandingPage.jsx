@@ -8,7 +8,7 @@ function LandingPage(){
        const idInt = parseInt(id);
        const [tableData,setTableData] = useState([]);
        const [loading , setLoading] = useState(true);
-       const [searchParam , setSearchParam] = useState('Pincode')
+       const [searchParam , setSearchParam] = useState('PinCode')
        const [searchInput , setSearchInput] = useState('');
        const [count , setCount] = useState(0);
        const [isEdit  ,setIsEdit] = useState(false);
@@ -69,9 +69,9 @@ function LandingPage(){
 function SearchParamSelect({onChange}){
      return(
         <div className="flex p-2">
-        <select onChange = {onChange} defaultValue = "Pincode" id="countries" className ="bg-gray-500 border border-gray-300 text-white text-sm rounded-lg   w-full p-2">
+        <select onChange = {onChange} defaultValue = "PinCode" id="countries" className ="bg-gray-500 border border-gray-300 text-white text-sm rounded-lg   w-full p-2">
             {/* <option>Choose a country</option> */}
-            <option value="Pincode">Pincode</option>
+            <option value="PinCode">Pincode</option>
             <option value="Circle Name"> Circle Name</option>
             <option value="District">District</option>
             <option value="Division Name">Division Name</option>

@@ -15,15 +15,12 @@ dataRouter.post('/fetch-insert' , async (req,res) => {
     const searchParam = req.body.searchParam;
     const searchInput  = req.body.searchInput;
     const conditions = {};
-    let regex = '';
-    if(searchParam !== 'Pincode')
-    {
-        let safeinput = searchInput.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&') 
-        regex = new RegExp("^" + safeinput, "i");
-    }
+    // let regex = '';
+    let safeinput = searchInput.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&') 
+    let regex = new RegExp("^" + safeinput, "i");
     if(searchInput !== '')
     {
-        (conditions[searchParam] = (searchParam == 'Pincode') ? parseInt(searchInput) : regex);
+        conditions[searchParam] = regex;
     }
     console.log(id);
     console.log(searchParam);

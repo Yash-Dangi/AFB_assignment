@@ -27,7 +27,7 @@ export default  function TableRow({rowData , index_no, setIsEdit , setOverlayDat
         {rowData['OfficeType']}
     </th>
     <td className="px-6 py-4">
-        {rowData['Pincode']}
+        {rowData['PinCode']}
     </td>
     <td className="px-6 py-4">
          {rowData['Region Name']}

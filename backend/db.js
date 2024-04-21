@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-
+require('dotenv').config();
 const db = async () => {
-     await mongoose.connect('mongodb+srv://yashdangijaora:Js4e1pkU2E9v3zAN@cluster0.el66e3l.mongodb.net/postalCodeApp');
+     await mongoose.connect(process.env.DATABASE_URL);
 }
 
 db();
