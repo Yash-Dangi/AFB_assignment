@@ -6,8 +6,13 @@ const cors = require('cors')
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use('/' , dataRouter);
+app.use('/api/v1' , dataRouter);
 
-app.listen(3000 , () => {
-    console.log('listening on 3000');
-})
+try{
+    app.listen(3000 , () => {})
+}
+catch(err){
+    console.log(err); 
+}
+
+module.exports = app;
