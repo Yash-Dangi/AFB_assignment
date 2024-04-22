@@ -23,38 +23,92 @@ export default function EditOverlay({ selectedRow, setIsEditing }) {
         <FormElement
           label={"Circle Name"}
           value={data.circleName}
+          onChange = {(e) =>{
+              setData((data) => ({
+                  ...data,
+                  circleName : e.target.value
+              }))
+          }}
         />
         <FormElement
           label={"Delivery"}
           value={data.delivery}
+          onChange = {(e) =>{
+            setData((data) => ({
+                ...data,
+                delivery : e.target.value
+            }))
+        }}
         />
         <FormElement
           label={"District"}
           value={data.district}
+          onChange = {(e) =>{
+            setData((data) => ({
+                ...data,
+                district : e.target.value
+            }))
+        }}
         />
         <FormElement
           label={"Division Name"}
           value={data.divisionName}
+          onChange = {(e) =>{
+            setData((data) => ({
+                ...data,
+                divisionName : e.target.value
+            }))
+        }}
           />
         <FormElement
           label={"Office Name"}
           value={data.officeName}
+          onChange = {(e) =>{
+            setData((data) => ({
+                ...data,
+                officeName : e.target.value
+            }))
+        }}
           />
         <FormElement
           label={"OfficeType"}
           value={data.officeType}
+          onChange = {(e) =>{
+            setData((data) => ({
+                ...data,
+                officeType : e.target.value
+            }))
+        }}
           />
         <FormElement
           label={"PinCode"}
           value={data.pincode}
+          onChange = {(e) =>{
+            setData((data) => ({
+                ...data,
+                pincode : e.target.value
+            }))
+        }}
           />
         <FormElement
           label={"Region Name"}
           value={data.region}
+          onChange = {(e) =>{
+            setData((data) => ({
+                ...data,
+                region : e.target.value
+            }))
+        }}
           />
         <FormElement
           label={"StateName"}
           value={data.state}
+          onChange = {(e) =>{
+            setData((data) => ({
+                ...data,
+                state : e.target.value
+            }))
+        }}
           />
         <div className="w-full flex justify-center items-center gap-4">
           <div className="w-2/4 flex justify-center items-center bg-green-500 rounded-md">

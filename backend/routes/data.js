@@ -48,6 +48,7 @@ const createBody = z.object({
   StateName: z.string().min(1),
 });
 dataRouter.post("/create", async (req, res) => {
+  
   const body = req.body;
   const response = createBody.safeParse(body);
   if (!response.success) {
@@ -70,6 +71,7 @@ dataRouter.post("/create", async (req, res) => {
   }
 });
 dataRouter.put("/update", async (req, res) => {
+  
   const body = req.body;
   const response = createBody.safeParse(body.data);
   if (!response.success) {
@@ -90,6 +92,7 @@ dataRouter.put("/update", async (req, res) => {
   }
 });
 dataRouter.delete("/delete", async (req, res) => {
+ 
   const id = req.query.id;
   try {
     await dataModel.findByIdAndDelete(id);
