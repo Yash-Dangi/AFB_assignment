@@ -13,7 +13,7 @@ export default function DeleteComp({ id, setIsDeleting }) {
               <button
                 className="w-full text-white flex items-center justify-center h-10 rounded-md bg-red-500"
                 onClick={async () => {
-                  await axios.delete("http://localhost:3000/api/v1/delete", {
+                  await axios.delete("http://13.48.68.44:3000/api/v1/delete", {
                     params: {
                       id,
                     },

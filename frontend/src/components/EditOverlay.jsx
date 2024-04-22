@@ -130,7 +130,7 @@ export default function EditOverlay({ selectedRow, setIsEditing }) {
                 //   return;
                 // }
                 if(selectedRow) {
-                  await axios.put("http://localhost:3000/api/v1/update", {
+                  await axios.put("http://13.48.68.44:3000/api/v1/update", {
                     id: selectedRow._id,
                     data: {
                       "Circle Name": data.circleName,
@@ -145,7 +145,7 @@ export default function EditOverlay({ selectedRow, setIsEditing }) {
                     },
                   });
                 } else {
-                  await axios.post("http://localhost:3000/api/v1/create", {
+                  await axios.post("http://13.48.68.44:3000/api/v1/create", {
                     "Circle Name": data.circleName,
                     Delivery: data.delivery,
                     "Division Name": data.divisionName,

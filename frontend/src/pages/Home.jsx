@@ -26,7 +26,7 @@ function Home() {
   useEffect(() => {
     axios
       .get(
-        "http://localhost:3000/api/v1/fetchData",
+        "http://13.48.68.44:3000/api/v1/fetchData",
         {
           params: {
             id,
